@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Backgrounds */
+  --color-bg-primary: #f9fafb;
+  --color-bg-secondary: #e5e7eb;
+  /* Text */
+  --color-text-primary: #111111;
+  --color-text-secondary: #ffffff;
+  --color-text-muted: #d1d5db;
+
+  /* Accent */
+
+  --color-accent: #dc2626;
+  --color-accent-hover: #991b1b;
+
+  /* Borders (Optional) */
+  --color-border: #6b7280;
+
+  /* Extras (Optional) */
+  --color-warning: #fb923c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
