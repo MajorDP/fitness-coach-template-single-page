@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import Mailjet from "node-mailjet";
 import fs from "fs";
+import path from "path";
 
 const mailjet = new Mailjet({
   apiKey: process.env.MJ_APIKEY_PUBLIC,
@@ -14,7 +15,8 @@ export async function POST(req) {
     return NextResponse.json({ status: 400, error: "Please fill all fields." });
   }
 
-  const fileBuffer = fs.readFileSync("public/test.txt");
+  const filePath = path.join(process.cwd(), "public", "test.txt");
+  const fileBuffer = fs.readFileSync(filePath);
   const base64File = fileBuffer.toString("base64");
 
   try {
