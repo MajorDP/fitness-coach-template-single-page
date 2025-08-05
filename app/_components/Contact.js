@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 
 function Contact() {
   return (
@@ -51,62 +52,7 @@ function Contact() {
           </div>
         </div>
 
-        <form className="flex flex-col gap-4 bg-bg-primary p-4 md:p-8 rounded-lg border border-border w-full">
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="name"
-              className="text-sm md:text-base text-text-primary font-semibold"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="px-4 py-3 rounded-md bg-white text-text-primary/80 border border-border focus:outline-none"
-            />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="email"
-              className="text-sm md:text-base text-text-primary font-semibold"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              className="px-4 py-3 rounded-md bg-white text-text-primary/80 border border-border focus:outline-none"
-            />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="message"
-              className="text-sm md:text-base text-text-primary font-semibold"
-            >
-              Please tell me about your needs
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              required
-              className="text-sm md:text-base px-4 py-3 rounded-md bg-white text-text-primary/80 border border-border focus:outline-none"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="mt-4 w-full px-8 py-4 rounded-lg md:text-lg font-semibold transition bg-gradient-to-br from-accent hover:to-accent to-accent-hover text-text-secondary cursor-pointer"
-          >
-            Send Message
-          </button>
-        </form>
+        <ContactForm />
       </div>
     </section>
   );
