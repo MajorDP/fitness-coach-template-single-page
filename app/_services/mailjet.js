@@ -1,6 +1,8 @@
+const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "";
+
 export async function contact(formData) {
   try {
-    const res = await fetch("/api/contact", {
+    const res = await fetch(`${baseUrl}/api/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -20,7 +22,7 @@ export async function contact(formData) {
 
 export async function subscribe(formData) {
   try {
-    const res = await fetch("/api/subscribe", {
+    const res = await fetch(`${baseUrl}/api/subscribe`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

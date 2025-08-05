@@ -7,7 +7,7 @@ import Hero from "./_components/Hero";
 
 //TODO: REPLACE TO FIT
 export async function generateMetadata() {
-  const baseUrl = "https://yourdomain.com"; // to REPLACE with ACTUAL DOMAIN NAME
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || ""; // to REPLACE with ACTUAL DOMAIN NAME
 
   return {
     title: "Get Fit with James Smith - Free 7-Day Workout Plan",
